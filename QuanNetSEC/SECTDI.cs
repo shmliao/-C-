@@ -92,272 +92,272 @@ namespace QuanNetSEC
 
     public delegate IntPtr DeleSubscribePrivateTopic(IntPtr api, RESUME_TYPE nResumeType);
 
-	 /**
-      * STOCK-登录请求
-      * @param p:指向用户登录请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+	 ///
+     ///STOCK-登录请求
+     ///@param p:指向用户登录请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
 
     public IntPtr ReqStockUserLogin(DFITCSECReqUserLoginField p)
     {
         return (Invoke(_handle, "ReqStockUserLogin", typeof(DeleReqStockUserLogin)) as DeleReqStockUserLogin)(_api, p);
     }
      public delegate IntPtr DeleReqStockUserLogin(IntPtr api,DFITCSECReqUserLoginField p) ;    
-     /**
-      * STOCK-登出请求
-      * @param p:指向用户登出请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-登出请求
+     ///@param p:指向用户登出请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockUserLogout(DFITCSECReqUserLogoutField p)
      {
          return (Invoke(_handle, "ReqStockUserLogout", typeof(DeleReqStockUserLogout)) as DeleReqStockUserLogout)(_api, p);
      }
      public delegate IntPtr DeleReqStockUserLogout(IntPtr api,DFITCSECReqUserLogoutField p) ;
-     /**
-      * STOCK-密码更新请求
-      * @param p:指向用户密码更新请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-密码更新请求
+     ///@param p:指向用户密码更新请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockUserPasswordUpdate(DFITCSECReqPasswordUpdateField p)
      {
          return (Invoke(_handle, "ReqStockUserPasswordUpdate", typeof(DeleReqStockUserPasswordUpdate)) as DeleReqStockUserPasswordUpdate)(_api, p);
      }
      public delegate IntPtr DeleReqStockUserPasswordUpdate(IntPtr api,DFITCSECReqPasswordUpdateField p) ;
-     /**
-      * STOCK-委托请求
-      * @param p:指向用户委托请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-委托请求
+     ///@param p:指向用户委托请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockEntrustOrder(DFITCStockReqEntrustOrderField p)
      {
          return (Invoke(_handle, "ReqStockEntrustOrder", typeof(DeleReqStockEntrustOrder)) as DeleReqStockEntrustOrder)(_api, p);
      }
      public delegate IntPtr DeleReqStockEntrustOrder(IntPtr api,DFITCStockReqEntrustOrderField p) ;
-     /**
-      * STOCK-撤单请求
-      * @param p:指向用户撤单请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-撤单请求
+     ///@param p:指向用户撤单请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockWithdrawOrder(DFITCSECReqWithdrawOrderField p)
      {
          return (Invoke(_handle, "ReqStockWithdrawOrder", typeof(DeleReqStockWithdrawOrder)) as DeleReqStockWithdrawOrder)(_api, p);
      }
      public delegate IntPtr DeleReqStockWithdrawOrder(IntPtr api,DFITCSECReqWithdrawOrderField p) ;
-     /**
-      * STOCK-委托查询请求
-      * @param p:指向用户委托查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-委托查询请求
+     ///@param p:指向用户委托查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryEntrustOrder(DFITCStockReqQryEntrustOrderField p)
      {
          return (Invoke(_handle, "ReqStockQryEntrustOrder", typeof(DeleReqStockQryEntrustOrder)) as DeleReqStockQryEntrustOrder)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryEntrustOrder(IntPtr api,DFITCStockReqQryEntrustOrderField p) ;
-     /**
-      * STOCK-实时成交查询请求
-      * @param p:指向用户实时成交查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-实时成交查询请求
+     ///@param p:指向用户实时成交查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryRealTimeTrade(DFITCStockReqQryRealTimeTradeField p)
      {
          return (Invoke(_handle, "ReqStockQryRealTimeTrade", typeof(DeleReqStockQryRealTimeTrade)) as DeleReqStockQryRealTimeTrade)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryRealTimeTrade(IntPtr api,DFITCStockReqQryRealTimeTradeField p) ;
-     /**
-      * STOCK-分笔成交查询请求
-      * @param p:指向用户分笔成交查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-分笔成交查询请求
+     ///@param p:指向用户分笔成交查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQrySerialTrade(DFITCStockReqQrySerialTradeField p)
      {
          return (Invoke(_handle, "ReqStockQrySerialTrade", typeof(DeleReqStockQrySerialTrade)) as DeleReqStockQrySerialTrade)(_api, p);
      }
      public delegate IntPtr DeleReqStockQrySerialTrade(IntPtr api,DFITCStockReqQrySerialTradeField p) ;
-     /**
-      * STOCK-持仓查询请求
-      * @param p:指向用户持仓查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-持仓查询请求
+     ///@param p:指向用户持仓查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryPosition(DFITCStockReqQryPositionField p)
      {
          return (Invoke(_handle, "ReqStockQryPosition", typeof(DeleReqStockQryPosition)) as DeleReqStockQryPosition)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryPosition(IntPtr api,DFITCStockReqQryPositionField p) ;
-     /**
-      * STOCK-资金账户查询请求
-      * @param p:指向用户资金账户查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-资金账户查询请求
+     ///@param p:指向用户资金账户查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryCapitalAccountInfo(DFITCStockReqQryCapitalAccountField p)
      {
          return (Invoke(_handle, "ReqStockQryCapitalAccountInfo", typeof(DeleReqStockQryCapitalAccountInfo)) as DeleReqStockQryCapitalAccountInfo)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryCapitalAccountInfo(IntPtr api,DFITCStockReqQryCapitalAccountField p) ;
-     /**
-      * STOCK-账户查询请求
-      * @param p:指向用户账户查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-账户查询请求
+     ///@param p:指向用户账户查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryAccountInfo(DFITCStockReqQryAccountField p)
      {
          return (Invoke(_handle, "ReqStockQryAccountInfo", typeof(DeleReqStockQryAccountInfo)) as DeleReqStockQryAccountInfo)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryAccountInfo(IntPtr api,DFITCStockReqQryAccountField p) ;
-     /**
-      * STOCK-股东查询请求
-      * @param p:指向用户股东查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-股东查询请求
+     ///@param p:指向用户股东查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryShareholderInfo(DFITCStockReqQryShareholderField p)
      {
          return (Invoke(_handle, "ReqStockQryShareholderInfo", typeof(DeleReqStockQryShareholderInfo)) as DeleReqStockQryShareholderInfo)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryShareholderInfo(IntPtr api,DFITCStockReqQryShareholderField p) ;
-     /**
-      * STOCK-调拨资金请求
-      * @param p:指向用户调拨资金请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-调拨资金请求
+     ///@param p:指向用户调拨资金请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockTransferFunds(DFITCStockReqTransferFundsField p)
      {
          return (Invoke(_handle, "ReqStockTransferFunds", typeof(DeleReqStockTransferFunds)) as DeleReqStockTransferFunds)(_api, p);
      }
      public delegate IntPtr DeleReqStockTransferFunds(IntPtr api,DFITCStockReqTransferFundsField p) ;
-     /**
-      * STOCK-批量委托请求
-      * @param p:指向用户批量委托请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-批量委托请求
+     ///@param p:指向用户批量委托请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockEntrustBatchOrder(DFITCStockReqEntrustBatchOrderField p)
      {
          return (Invoke(_handle, "ReqStockEntrustBatchOrder", typeof(DeleReqStockEntrustBatchOrder)) as DeleReqStockEntrustBatchOrder)(_api, p);
      }
      public delegate IntPtr DeleReqStockEntrustBatchOrder(IntPtr api,DFITCStockReqEntrustBatchOrderField p) ;
-     /**
-      * STOCK-批量撤单请求
-      * @param p:指向用户批量撤单请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-批量撤单请求
+     ///@param p:指向用户批量撤单请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockWithdrawBatchOrder(DFITCStockReqWithdrawBatchOrderField p)
      {
          return (Invoke(_handle, "ReqStockWithdrawBatchOrder", typeof(DeleReqStockWithdrawBatchOrder)) as DeleReqStockWithdrawBatchOrder)(_api, p);
      }
      public delegate IntPtr DeleReqStockWithdrawBatchOrder(IntPtr api,DFITCStockReqWithdrawBatchOrderField p) ;
-     /**
-      * STOCK-计算可委托数量请求
-      * @param p:指向用户计算可委托数量请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-计算可委托数量请求
+     ///@param p:指向用户计算可委托数量请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockCalcAbleEntrustQty(DFITCStockReqCalcAbleEntrustQtyField p)
      {
          return (Invoke(_handle, "ReqStockCalcAbleEntrustQty", typeof(DeleReqStockCalcAbleEntrustQty)) as DeleReqStockCalcAbleEntrustQty)(_api, p);
      }
      public delegate IntPtr DeleReqStockCalcAbleEntrustQty(IntPtr api,DFITCStockReqCalcAbleEntrustQtyField p) ;
-     /**
-      * STOCK-计算可申购ETF篮子数请求
-      * @param p:指向用户计算可申购ETF篮子数请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-计算可申购ETF篮子数请求
+     ///@param p:指向用户计算可申购ETF篮子数请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockCalcAblePurchaseETFQty(DFITCStockReqCalcAblePurchaseETFQtyField p)
      {
          return (Invoke(_handle, "ReqStockCalcAblePurchaseETFQty", typeof(DeleReqStockCalcAblePurchaseETFQty)) as DeleReqStockCalcAblePurchaseETFQty)(_api, p);
      }
      public delegate IntPtr DeleReqStockCalcAblePurchaseETFQty(IntPtr api,DFITCStockReqCalcAblePurchaseETFQtyField p) ;
-     /**
-      * STOCK-冻结资金明细查询请求
-      * @param p:指向用户冻结资金明细查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-冻结资金明细查询请求
+     ///@param p:指向用户冻结资金明细查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryFreezeFundsDetail(DFITCStockReqQryFreezeFundsDetailField p)
      {
          return (Invoke(_handle, "ReqStockQryFreezeFundsDetail", typeof(DeleReqStockQryFreezeFundsDetail)) as DeleReqStockQryFreezeFundsDetail)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryFreezeFundsDetail(IntPtr api,DFITCStockReqQryFreezeFundsDetailField p) ;
-     /**
-      * STOCK-冻结证券明细查询
-      * @param p:指向用户冻结证券明细查询结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-冻结证券明细查询
+     ///@param p:指向用户冻结证券明细查询结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryFreezeStockDetail(DFITCStockReqQryFreezeStockDetailField p)
      {
          return (Invoke(_handle, "ReqStockQryFreezeStockDetail", typeof(DeleReqStockQryFreezeStockDetail)) as DeleReqStockQryFreezeStockDetail)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryFreezeStockDetail(IntPtr api,DFITCStockReqQryFreezeStockDetailField p) ;
-     /**
-      * STOCK-调拨资金明细查询请求
-      * @param p:指向用户调拨资金明细查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-调拨资金明细查询请求
+     ///@param p:指向用户调拨资金明细查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryTransferFundsDetail(DFITCStockReqQryTransferFundsDetailField p)
      {
          return (Invoke(_handle, "ReqStockQryTransferFundsDetail", typeof(DeleReqStockQryTransferFundsDetail)) as DeleReqStockQryTransferFundsDetail)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryTransferFundsDetail(IntPtr api,DFITCStockReqQryTransferFundsDetailField p) ;
-     /**
-      * STOCK-调拨证券明细查询请求
-      * @param p:指向用户调拨证券明细查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-调拨证券明细查询请求
+     ///@param p:指向用户调拨证券明细查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryTransferStockDetail(DFITCStockReqQryTransferStockDetailField p)
      {
          return (Invoke(_handle, "ReqStockQryTransferStockDetail", typeof(DeleReqStockQryTransferStockDetail)) as DeleReqStockQryTransferStockDetail)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryTransferStockDetail(IntPtr api,DFITCStockReqQryTransferStockDetailField p) ; 
-     /**
-      * STOCK-股票查询请求
-      * @param p:指向用户股票查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-股票查询请求
+     ///@param p:指向用户股票查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryStockInfo(DFITCStockReqQryStockField p)
      {
          return (Invoke(_handle, "ReqStockQryStockInfo", typeof(DeleReqStockQryStockInfo)) as DeleReqStockQryStockInfo)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryStockInfo(IntPtr api,DFITCStockReqQryStockField p) ;
-     /**
-      * STOCK-股票静态信息查询请求
-      * @param p:指向用户股票静态信息查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-股票静态信息查询请求
+     ///@param p:指向用户股票静态信息查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryStockStaticInfo(DFITCStockReqQryStockStaticField p)
      {
          return (Invoke(_handle, "ReqStockQryStockStaticInfo", typeof(DeleReqStockQryStockStaticInfo)) as DeleReqStockQryStockStaticInfo)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryStockStaticInfo(IntPtr api,DFITCStockReqQryStockStaticField p) ;
-     /**
-      * STOCK-交易时间查询请求
-      * @param p:指向用户交易时间查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+     ///
+     ///STOCK-交易时间查询请求
+     ///@param p:指向用户交易时间查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqStockQryTradeTime(DFITCStockReqQryTradeTimeField p)
      {
          return (Invoke(_handle, "ReqStockQryTradeTime", typeof(DeleReqStockQryTradeTime)) as DeleReqStockQryTradeTime)(_api, p);
      }
      public delegate IntPtr DeleReqStockQryTradeTime(IntPtr api,DFITCStockReqQryTradeTimeField p) ;
-     /**
-      * SOP-登录请求
-      * @param p:指向用户登录请求结构的地址
-      * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
-      */
+     ///
+     ///SOP-登录请求
+     ///@param p:指向用户登录请求结构的地址
+     ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
+      ///
      public IntPtr ReqSOPUserLogin(DFITCSECReqUserLoginField p)
      {
          return (Invoke(_handle, "ReqSOPUserLogin", typeof(DeleReqSOPUserLogin)) as DeleReqSOPUserLogin)(_api, p);
      }
      public delegate IntPtr DeleReqSOPUserLogin(IntPtr api,DFITCSECReqUserLoginField p) ;
-     /**
-      * SOP-登出请求
-      * @param p:指向用户登出请求结构的地址
-      * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
-      */
+     ///
+     ///SOP-登出请求
+     ///@param p:指向用户登出请求结构的地址
+     ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
+      ///
      public IntPtr ReqSOPUserLogout(DFITCSECReqUserLogoutField p)
      {
          return (Invoke(_handle, "ReqSOPUserLogout", typeof(DeleReqSOPUserLogout)) as DeleReqSOPUserLogout)(_api, p);
      }
      public delegate IntPtr DeleReqSOPUserLogout(IntPtr api,DFITCSECReqUserLogoutField p) ;
-     /**
-      * SOP-交易密码更新请求
-      * @param p:指向用户密码更新请求结构的地址
-      * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
-      */
+     ///
+     ///SOP-交易密码更新请求
+     ///@param p:指向用户密码更新请求结构的地址
+     ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
+      ///
      public IntPtr ReqSOPUserPasswordUpdate(DFITCSECReqPasswordUpdateField p)
      {
          return (Invoke(_handle, "ReqSOPUserPasswordUpdate", typeof(DeleReqSOPUserPasswordUpdate)) as DeleReqSOPUserPasswordUpdate)(_api, p);
@@ -382,501 +382,501 @@ namespace QuanNetSEC
         return (Invoke(_handle, "ReqSOPGroupSplit", typeof(DeleReqSOPGroupSplit)) as DeleReqSOPGroupSplit)(_api, p);
     }
     public delegate IntPtr DeleReqSOPGroupSplit(IntPtr api,DFITCSOPReqGroupSplitField p) ;
-    /**
-     * SOP-查询客户组合持仓明细请求
-     * @param p:指向用户查询客户组合持仓明细请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
-     */
+    ///
+    ///SOP-查询客户组合持仓明细请求
+    ///@param p:指向用户查询客户组合持仓明细请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml
+     ///
     public IntPtr ReqSOPQryGroupPosition(DFITCSOPReqQryGroupPositionField p)
     {
         return (Invoke(_handle, "ReqSOPQryGroupPosition", typeof(DeleReqSOPQryGroupPosition)) as DeleReqSOPQryGroupPosition)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryGroupPosition(IntPtr api,DFITCSOPReqQryGroupPositionField p) ;
-    /**
-     * SOP-证券锁定解锁请求
-     * @param p:指向用户证券锁定解锁请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-证券锁定解锁请求
+    ///@param p:指向用户证券锁定解锁请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPLockOUnLockStock(DFITCSOPReqLockOUnLockStockField p)
     {
         return (Invoke(_handle, "ReqSOPLockOUnLockStock", typeof(DeleReqSOPLockOUnLockStock)) as DeleReqSOPLockOUnLockStock)(_api, p);
     }
     public delegate IntPtr DeleReqSOPLockOUnLockStock(IntPtr api,DFITCSOPReqLockOUnLockStockField p) ;
-    /**
-     * SOP-撤单请求
-     * @param p:指向用户撤单请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-撤单请求
+    ///@param p:指向用户撤单请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPWithdrawOrder(DFITCSECReqWithdrawOrderField p)
     {
         return (Invoke(_handle, "ReqSOPWithdrawOrder", typeof(DeleReqSOPWithdrawOrder)) as DeleReqSOPWithdrawOrder)(_api, p);
     }
     public delegate IntPtr DeleReqSOPWithdrawOrder(IntPtr api,DFITCSECReqWithdrawOrderField p) ;
-    /**
-     * SOP-当日委托查询请求
-     * @param p:指向用户当日委托查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-当日委托查询请求
+    ///@param p:指向用户当日委托查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryEntrustOrder(DFITCSOPReqQryEntrustOrderField p)
     {
         return (Invoke(_handle, "ReqSOPQryEntrustOrder", typeof(DeleReqSOPQryEntrustOrder)) as DeleReqSOPQryEntrustOrder)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryEntrustOrder(IntPtr api,DFITCSOPReqQryEntrustOrderField p) ;
-    /**
-     * SOP-分笔成交查询请求
-     * @param p:指向用户分笔成交查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-分笔成交查询请求
+    ///@param p:指向用户分笔成交查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQrySerialTrade(DFITCSOPReqQrySerialTradeField p)
     {
         return (Invoke(_handle, "ReqSOPQrySerialTrade", typeof(DeleReqSOPQrySerialTrade)) as DeleReqSOPQrySerialTrade)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQrySerialTrade(IntPtr api,DFITCSOPReqQrySerialTradeField p) ;
-    /**
-     * SOP-持仓查询请求
-     * @param p:指向用户持仓查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-持仓查询请求
+    ///@param p:指向用户持仓查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryPosition(DFITCSOPReqQryPositionField p)
     {
         return (Invoke(_handle, "ReqSOPQryPosition", typeof(DeleReqSOPQryPosition)) as DeleReqSOPQryPosition)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryPosition(IntPtr api,DFITCSOPReqQryPositionField p) ;
-    /**
-     * SOP-担保物持仓查询请求
-     * @param p:指向用户担保物持仓查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-担保物持仓查询请求
+    ///@param p:指向用户担保物持仓查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryCollateralPosition(DFITCSOPReqQryCollateralPositionField p)
     {
         return (Invoke(_handle, "ReqSOPQryCollateralPosition", typeof(DeleReqSOPQryCollateralPosition)) as DeleReqSOPQryCollateralPosition)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryCollateralPosition(IntPtr api,DFITCSOPReqQryCollateralPositionField p) ;
-    /**
-     * SOP-资金信息查询请求
-     * @param p:指向用户资金信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-资金信息查询请求
+    ///@param p:指向用户资金信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryCapitalAccountInfo(DFITCSOPReqQryCapitalAccountField p)
     {
         return (Invoke(_handle, "ReqSOPQryCapitalAccountInfo", typeof(DeleReqSOPQryCapitalAccountInfo)) as DeleReqSOPQryCapitalAccountInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryCapitalAccountInfo(IntPtr api,DFITCSOPReqQryCapitalAccountField p) ;
-    /**
-     * SOP-客户信息查询请求
-     * @param p:指向用户客户信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-客户信息查询请求
+    ///@param p:指向用户客户信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryAccountInfo(DFITCSOPReqQryAccountField p)
     {
         return (Invoke(_handle, "ReqSOPQryAccountInfo", typeof(DeleReqSOPQryAccountInfo)) as DeleReqSOPQryAccountInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryAccountInfo(IntPtr api,DFITCSOPReqQryAccountField p) ;
-    /**
-     * SOP-股东信息查询请求
-     * @param p:指向用户股东信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-股东信息查询请求
+    ///@param p:指向用户股东信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryShareholderInfo(DFITCSOPReqQryShareholderField p)
     {
         return (Invoke(_handle, "ReqSOPQryShareholderInfo", typeof(DeleReqSOPQryShareholderInfo)) as DeleReqSOPQryShareholderInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryShareholderInfo(IntPtr api,DFITCSOPReqQryShareholderField p) ;
-    /**
-     * SOP-可委托数量计算请求
-     * @param p:指向用户可委托数量计算请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-可委托数量计算请求
+    ///@param p:指向用户可委托数量计算请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPCalcAbleEntrustQty(DFITCSOPReqCalcAbleEntrustQtyField p)
     {
         return (Invoke(_handle, "ReqSOPCalcAbleEntrustQty", typeof(DeleReqSOPCalcAbleEntrustQty)) as DeleReqSOPCalcAbleEntrustQty)(_api, p);
     }
     public delegate IntPtr DeleReqSOPCalcAbleEntrustQty(IntPtr api,DFITCSOPReqCalcAbleEntrustQtyField p) ;
-    /**
-     * SOP-可锁定证券数量查询请求
-     * @param p:指向用户可锁定证券数量查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-可锁定证券数量查询请求
+    ///@param p:指向用户可锁定证券数量查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryAbleLockStock(DFITCSOPReqQryAbleLockStockField p)
     {
         return (Invoke(_handle, "ReqSOPQryAbleLockStock", typeof(DeleReqSOPQryAbleLockStock)) as DeleReqSOPQryAbleLockStock)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryAbleLockStock(IntPtr api,DFITCSOPReqQryAbleLockStockField p) ;
-    /**
-     * SOP-期权合约代码查询请求
-     * @param p:指向用户期权合约代码查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-期权合约代码查询请求
+    ///@param p:指向用户期权合约代码查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryContactInfo(DFITCSOPReqQryContactField p)
     {
         return (Invoke(_handle, "ReqSOPQryContactInfo", typeof(DeleReqSOPQryContactInfo)) as DeleReqSOPQryContactInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryContactInfo(IntPtr api,DFITCSOPReqQryContactField p) ;
-    /**
-     * SOP-行权委托请求
-     * @param p:指向用户行权委托请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-行权委托请求
+    ///@param p:指向用户行权委托请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPExectueOrder(DFITCSOPReqExectueOrderField p)
     {
         return (Invoke(_handle, "ReqSOPExectueOrder", typeof(DeleReqSOPExectueOrder)) as DeleReqSOPExectueOrder)(_api, p);
     }
     public delegate IntPtr DeleReqSOPExectueOrder(IntPtr api,DFITCSOPReqExectueOrderField p) ;
-    /**
-     * SOP-行权指派信息查询请求
-     * @param p:指向用户行权指派信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-行权指派信息查询请求
+    ///@param p:指向用户行权指派信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryExecAssiInfo(DFITCSOPReqQryExecAssiInfoField p)
     {
         return (Invoke(_handle, "ReqSOPQryExecAssiInfo", typeof(DeleReqSOPQryExecAssiInfo)) as DeleReqSOPQryExecAssiInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryExecAssiInfo(IntPtr api,DFITCSOPReqQryExecAssiInfoField p) ;
-    /**
-     * SOP-交易时间查询请求
-     * @param p:指向用户交易时间查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-交易时间查询请求
+    ///@param p:指向用户交易时间查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryTradeTime(DFITCSOPReqQryTradeTimeField p)
     {
         return (Invoke(_handle, "ReqSOPQryTradeTime", typeof(DeleReqSOPQryTradeTime)) as DeleReqSOPQryTradeTime)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryTradeTime(IntPtr api,DFITCSOPReqQryTradeTimeField p) ;
-    /**
-     * SOP-交易所信息查询请求
-     * @param p:指向用户交易所信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-交易所信息查询请求
+    ///@param p:指向用户交易所信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryExchangeInfo(DFITCSOPReqQryExchangeInfoField p)
     {
         return (Invoke(_handle, "ReqSOPQryExchangeInfo", typeof(DeleReqSOPQryExchangeInfo)) as DeleReqSOPQryExchangeInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryExchangeInfo(IntPtr api,DFITCSOPReqQryExchangeInfoField p) ;
-    /**
-     * SOP-手续费查询请求
-     * @param p:指向用户手续费查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-手续费查询请求
+    ///@param p:指向用户手续费查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryCommission(DFITCSOPReqQryCommissionField p)
     {
         return (Invoke(_handle, "ReqSOPQryCommission", typeof(DeleReqSOPQryCommission)) as DeleReqSOPQryCommission)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryCommission(IntPtr api,DFITCSOPReqQryCommissionField p) ;
-    /**
-     * SOP-保证金查询请求
-     * @param p:指向用户保证金查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-保证金查询请求
+    ///@param p:指向用户保证金查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryDeposit(DFITCSOPReqQryDepositField p)
     {
         return (Invoke(_handle, "ReqSOPQryDeposit", typeof(DeleReqSOPQryDeposit)) as DeleReqSOPQryDeposit)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryDeposit(IntPtr api,DFITCSOPReqQryDepositField p) ;
-    /**
-     * SOP-标的信息查询请求
-     * @param p:指向用户标的信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///SOP-标的信息查询请求
+    ///@param p:指向用户标的信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqSOPQryContractObjectInfo(DFITCSOPReqQryContractObjectField p)
     {
         return (Invoke(_handle, "ReqSOPQryContractObjectInfo", typeof(DeleReqSOPQryContractObjectInfo)) as DeleReqSOPQryContractObjectInfo)(_api, p);
     }
     public delegate IntPtr DeleReqSOPQryContractObjectInfo(IntPtr api,DFITCSOPReqQryContractObjectField p) ;
-    /**
-     * FASL-登录请求
-     * @param p:指向用户登录请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-登录请求
+    ///@param p:指向用户登录请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLUserLogin(DFITCSECReqUserLoginField p)
     {
         return (Invoke(_handle, "ReqFASLUserLogin", typeof(DeleReqFASLUserLogin)) as DeleReqFASLUserLogin)(_api, p);
     }
     public delegate IntPtr DeleReqFASLUserLogin(IntPtr api,DFITCSECReqUserLoginField p) ;
-    /**
-     * FASL-登出请求
-     * @param p:指向用户登出请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-登出请求
+    ///@param p:指向用户登出请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLUserLogout(DFITCSECReqUserLogoutField p)
     {
         return (Invoke(_handle, "ReqFASLUserLogout", typeof(DeleReqFASLUserLogout)) as DeleReqFASLUserLogout)(_api, p);
     }
     public delegate IntPtr DeleReqFASLUserLogout(IntPtr api,DFITCSECReqUserLogoutField p) ;
-    /**
-     * FASL-客户可融资信息请求
-     * @param p:指向用户客户可融资信息请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-客户可融资信息请求
+    ///@param p:指向用户客户可融资信息请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryAbleFinInfo(DFITCFASLReqAbleFinInfoField p)
     {
         return (Invoke(_handle, "ReqFASLQryAbleFinInfo", typeof(DeleReqFASLQryAbleFinInfo)) as DeleReqFASLQryAbleFinInfo)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryAbleFinInfo(IntPtr api,DFITCFASLReqAbleFinInfoField p) ;
-    /**
-     * FASL-客户可融券信息请求
-     * @param p:指向用户客户可融券信息请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-客户可融券信息请求
+    ///@param p:指向用户客户可融券信息请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryAbleSloInfo(DFITCFASLReqAbleSloInfoField p)
     {
         return (Invoke(_handle, "ReqFASLQryAbleSloInfo", typeof(DeleReqFASLQryAbleSloInfo)) as DeleReqFASLQryAbleSloInfo)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryAbleSloInfo(IntPtr api,DFITCFASLReqAbleSloInfoField p) ;
-    /**
-     * FASL-担保物划转请求
-     * @param p:指向用户担保物划转请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-担保物划转请求
+    ///@param p:指向用户担保物划转请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLTransferCollateral(DFITCFASLReqTransferCollateralField p)
     {
         return (Invoke(_handle, "ReqFASLTransferCollateral", typeof(DeleReqFASLTransferCollateral)) as DeleReqFASLTransferCollateral)(_api, p);
     }
     public delegate IntPtr DeleReqFASLTransferCollateral(IntPtr api,DFITCFASLReqTransferCollateralField p) ;
-    /**
-     * FASL-直接还款请求
-     * @param p:指向用户直接还款请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-直接还款请求
+    ///@param p:指向用户直接还款请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLDirectRepayment(DFITCFASLReqDirectRepaymentField p)
     {
         return (Invoke(_handle, "ReqFASLDirectRepayment", typeof(DeleReqFASLDirectRepayment)) as DeleReqFASLDirectRepayment)(_api, p);
     }
     public delegate IntPtr DeleReqFASLDirectRepayment(IntPtr api,DFITCFASLReqDirectRepaymentField p) ;
-    /**
-     * FASL-还券划转请求
-     * @param p:指向用户还券划转请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-还券划转请求
+    ///@param p:指向用户还券划转请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLRepayStockTransfer(DFITCFASLReqRepayStockTransferField p)
     {
         return (Invoke(_handle, "ReqFASLRepayStockTransfer", typeof(DeleReqFASLRepayStockTransfer)) as DeleReqFASLRepayStockTransfer)(_api, p);
     }
     public delegate IntPtr DeleReqFASLRepayStockTransfer(IntPtr api,DFITCFASLReqRepayStockTransferField p) ;
-    /**
-     * FASL-信用交易请求
-     * @param p:指向用户信用交易请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-信用交易请求
+    ///@param p:指向用户信用交易请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLEntrustCrdtOrder(DFITCFASLReqEntrustCrdtOrderField p)
     {
         return (Invoke(_handle, "ReqFASLEntrustCrdtOrder", typeof(DeleReqFASLEntrustCrdtOrder)) as DeleReqFASLEntrustCrdtOrder)(_api, p);
     }
     public delegate IntPtr DeleReqFASLEntrustCrdtOrder(IntPtr api,DFITCFASLReqEntrustCrdtOrderField p) ;
-    /**
-     * FASL-融资融券交易请求
-     * @param p:指向用户融资融券交易请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-融资融券交易请求
+    ///@param p:指向用户融资融券交易请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLEntrsuctOrder(DFITCFASLReqEntrustOrderField p)
     {
         return (Invoke(_handle, "ReqFASLEntrsuctOrder", typeof(DeleReqFASLEntrsuctOrder)) as DeleReqFASLEntrsuctOrder)(_api, p);
     }
     public delegate IntPtr DeleReqFASLEntrsuctOrder(IntPtr api,DFITCFASLReqEntrustOrderField p) ;
-    /**
-     * FASL-撤单请求
-     * @param p:指向用户撤单请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-撤单请求
+    ///@param p:指向用户撤单请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLWithdrawOrder(DFITCFASLReqWithdrawOrderField p)
     {
         return (Invoke(_handle, "ReqFASLWithdrawOrder", typeof(DeleReqFASLWithdrawOrder)) as DeleReqFASLWithdrawOrder)(_api, p);
     }
     public delegate IntPtr DeleReqFASLWithdrawOrder(IntPtr api,DFITCFASLReqWithdrawOrderField p) ;
-    /**
-     * FASL-信用可委托数量查询请求
-     * @param p:指向用户信用可委托数量查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-信用可委托数量查询请求
+    ///@param p:指向用户信用可委托数量查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLCalcAbleEntrustCrdtQty(DFITCFASLReqCalcAbleEntrustCrdtQtyField p)
     {
         return (Invoke(_handle, "ReqFASLCalcAbleEntrustCrdtQty", typeof(DeleReqFASLCalcAbleEntrustCrdtQty)) as DeleReqFASLCalcAbleEntrustCrdtQty)(_api, p);
     }
     public delegate IntPtr DeleReqFASLCalcAbleEntrustCrdtQty(IntPtr api,DFITCFASLReqCalcAbleEntrustCrdtQtyField p) ;
-    /**
-     * FASL-查询信用资金请求
-     * @param p:指向用户查询信用资金请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-查询信用资金请求
+    ///@param p:指向用户查询信用资金请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryCrdtFunds(DFITCFASLReqQryCrdtFundsField p)
     {
         return (Invoke(_handle, "ReqFASLQryCrdtFunds", typeof(DeleReqFASLQryCrdtFunds)) as DeleReqFASLQryCrdtFunds)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryCrdtFunds(IntPtr api,DFITCFASLReqQryCrdtFundsField p) ;
-    /**
-     * FASL-信用合约信息请求
-     * @param p:指向用户信用合约信息请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-信用合约信息请求
+    ///@param p:指向用户信用合约信息请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryCrdtContract(DFITCFASLReqQryCrdtContractField p)
     {
         return (Invoke(_handle, "ReqFASLQryCrdtContract", typeof(DeleReqFASLQryCrdtContract)) as DeleReqFASLQryCrdtContract)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryCrdtContract(IntPtr api,DFITCFASLReqQryCrdtContractField p) ;
-    /**
-     * FASL-信用合约变动信息查询请求
-     * @param p:指向用户信用合约变动信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-信用合约变动信息查询请求
+    ///@param p:指向用户信用合约变动信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryCrdtConChangeInfo(DFITCFASLReqQryCrdtConChangeInfoField p)
     {
         return (Invoke(_handle, "ReqFASLQryCrdtConChangeInfo", typeof(DeleReqFASLQryCrdtConChangeInfo)) as DeleReqFASLQryCrdtConChangeInfo)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryCrdtConChangeInfo(IntPtr api,DFITCFASLReqQryCrdtConChangeInfoField p) ;
-    /**
-     * FASL-资金调转请求
-     * @param p:指向用户资金调转请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-资金调转请求
+    ///@param p:指向用户资金调转请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLTransferFunds(DFITCStockReqTransferFundsField p)
     {
         return (Invoke(_handle, "ReqFASLTransferFunds", typeof(DeleReqFASLTransferFunds)) as DeleReqFASLTransferFunds)(_api, p);
     }
     public delegate IntPtr DeleReqFASLTransferFunds(IntPtr api,DFITCStockReqTransferFundsField p) ;
-    /**
-     * FASL-客户信息查询请求
-     * @param p:指向用户客户信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-客户信息查询请求
+    ///@param p:指向用户客户信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryAccountInfo(DFITCStockReqQryAccountField p)
     {
         return (Invoke(_handle, "ReqFASLQryAccountInfo", typeof(DeleReqFASLQryAccountInfo)) as DeleReqFASLQryAccountInfo)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryAccountInfo(IntPtr api,DFITCStockReqQryAccountField p) ;
-    /**
-     * FASL-客户资金查询请求
-     * @param p:指向用户客户资金查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-客户资金查询请求
+    ///@param p:指向用户客户资金查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryCapitalAccountInfo(DFITCStockReqQryCapitalAccountField p)
     {
         return (Invoke(_handle, "ReqFASLQryCapitalAccountInfo", typeof(DeleReqFASLQryCapitalAccountInfo)) as DeleReqFASLQryCapitalAccountInfo)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryCapitalAccountInfo(IntPtr api,DFITCStockReqQryCapitalAccountField p) ;
-    /**
-     * FASL-股东信息查询请求
-     * @param p:指向用户股东信息查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-股东信息查询请求
+    ///@param p:指向用户股东信息查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryShareholderInfo(DFITCStockReqQryShareholderField p)
     {
         return (Invoke(_handle, "ReqFASLQryShareholderInfo", typeof(DeleReqFASLQryShareholderInfo)) as DeleReqFASLQryShareholderInfo)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryShareholderInfo(IntPtr api,DFITCStockReqQryShareholderField p) ;
-    /**
-     * FASL-持仓查询请求
-     * @param p:指向用户持仓查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-持仓查询请求
+    ///@param p:指向用户持仓查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryPosition(DFITCStockReqQryPositionField p)
     {
         return (Invoke(_handle, "ReqFASLQryPosition", typeof(DeleReqFASLQryPosition)) as DeleReqFASLQryPosition)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryPosition(IntPtr api,DFITCStockReqQryPositionField p) ;
-    /**
-     * FASL-委托查询请求
-     * @param p:指向用户委托查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-委托查询请求
+    ///@param p:指向用户委托查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryEntrustOrder(DFITCStockReqQryEntrustOrderField p)
     {
         return (Invoke(_handle, "ReqFASLQryEntrustOrder", typeof(DeleReqFASLQryEntrustOrder)) as DeleReqFASLQryEntrustOrder)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryEntrustOrder(IntPtr api,DFITCStockReqQryEntrustOrderField p) ;
-    /**
-     * FASL-分笔成交查询请求
-     * @param p:指向用户分笔成交查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-分笔成交查询请求
+    ///@param p:指向用户分笔成交查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQrySerialTrade(DFITCStockReqQrySerialTradeField p)
     {
         return (Invoke(_handle, "ReqFASLQrySerialTrade", typeof(DeleReqFASLQrySerialTrade)) as DeleReqFASLQrySerialTrade)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQrySerialTrade(IntPtr api,DFITCStockReqQrySerialTradeField p) ;
-    /**
-     * FASL-实时成交查询请求
-     * @param p:指向用户实时成交查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-实时成交查询请求
+    ///@param p:指向用户实时成交查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryRealTimeTrade(DFITCStockReqQryRealTimeTradeField p)
     {
         return (Invoke(_handle, "ReqFASLQryRealTimeTrade", typeof(DeleReqFASLQryRealTimeTrade)) as DeleReqFASLQryRealTimeTrade)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryRealTimeTrade(IntPtr api,DFITCStockReqQryRealTimeTradeField p) ;
-    /**
-     * FASL-资金冻结明细查询请求
-     * @param p:指向用户资金冻结明细查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-资金冻结明细查询请求
+    ///@param p:指向用户资金冻结明细查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryFreezeFundsDetail(DFITCStockReqQryFreezeFundsDetailField p)
     {
         return (Invoke(_handle, "ReqFASLQryFreezeFundsDetail", typeof(DeleReqFASLQryFreezeFundsDetail)) as DeleReqFASLQryFreezeFundsDetail)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryFreezeFundsDetail(IntPtr api,DFITCStockReqQryFreezeFundsDetailField p) ;
-    /**
-     * FASL-证券冻结明细查询请求
-     * @param p:指向用户证券冻结明细查询请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-证券冻结明细查询请求
+    ///@param p:指向用户证券冻结明细查询请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryFreezeStockDetail(DFITCStockReqQryFreezeStockDetailField p)
     {
         return (Invoke(_handle, "ReqFASLQryFreezeStockDetail", typeof(DeleReqFASLQryFreezeStockDetail)) as DeleReqFASLQryFreezeStockDetail)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryFreezeStockDetail(IntPtr api,DFITCStockReqQryFreezeStockDetailField p) ;
-    /**
-     * FASL-查询资金调拨明细请求
-     * @param p:指向用户查询资金调拨明细请求结构的地址
-     * @return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
-     */
+    ///
+    ///FASL-查询资金调拨明细请求
+    ///@param p:指向用户查询资金调拨明细请求结构的地址
+    ///@return 0表示请求发送成功，其他值表示请求发送失败，具体错误请对照error.xml  
+     ///
     public IntPtr ReqFASLQryTransferFundsDetail(DFITCStockReqQryTransferFundsDetailField p)
     {
         return (Invoke(_handle, "ReqFASLQryTransferFundsDetail", typeof(DeleReqFASLQryTransferFundsDetail)) as DeleReqFASLQryTransferFundsDetail)(_api, p);
     }
     public delegate IntPtr DeleReqFASLQryTransferFundsDetail(IntPtr api,DFITCStockReqQryTransferFundsDetailField p) ;
-    /**
-      * FASL-当前系统时间查询请求
-      * @param p:指向用户交易时间查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+    ///
+     ///FASL-当前系统时间查询请求
+     ///@param p:指向用户交易时间查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
     public IntPtr ReqFASLQrySystemTime(DFITCFASLReqQryTradeTimeField p)
     {
         return (Invoke(_handle, "ReqFASLQrySystemTime", typeof(DeleReqFASLQrySystemTime)) as DeleReqFASLQrySystemTime)(_api, p);
     }
      public delegate IntPtr DeleReqFASLQrySystemTime(IntPtr api,DFITCFASLReqQryTradeTimeField p) ;
-    /**
-      * FASL-可转入担保证券查询请求
-      * @param p:指向可转入担保证券查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+    ///
+     ///FASL-可转入担保证券查询请求
+     ///@param p:指向可转入担保证券查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqFASLQryTransferredContract(DFITCFASLReqQryTransferredContractField p)
      {
          return (Invoke(_handle, "ReqFASLQryTransferredContract", typeof(DeleReqFASLQryTransferredContract)) as DeleReqFASLQryTransferredContract)(_api, p);
      }
      public delegate IntPtr DeleReqFASLQryTransferredContract(IntPtr api,DFITCFASLReqQryTransferredContractField p) ;
-    /**
-      * FASL-客户可取资金调出请求
-      * @param p:指向客户可取资金调出请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+    ///
+     ///FASL-客户可取资金调出请求
+     ///@param p:指向客户可取资金调出请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqFASLDesirableFundsOut(DFITCFASLReqDesirableFundsOutField p)
      {
          return (Invoke(_handle, "ReqFASLDesirableFundsOut", typeof(DeleReqFASLDesirableFundsOut)) as DeleReqFASLDesirableFundsOut)(_api, p);
      }
      public delegate IntPtr DeleReqFASLDesirableFundsOut(IntPtr api,DFITCFASLReqDesirableFundsOutField p) ;
-    /**
-      * FASL-担保证券查询请求
-      * @param p:指向担保证券查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+    ///
+     ///FASL-担保证券查询请求
+     ///@param p:指向担保证券查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqFASLQryGuaranteedContract(DFITCFASLReqQryGuaranteedContractField p)
      {
          return (Invoke(_handle, "ReqFASLQryGuaranteedContract", typeof(DeleReqFASLQryGuaranteedContract)) as DeleReqFASLQryGuaranteedContract)(_api, p);
      }
      public delegate IntPtr DeleReqFASLQryGuaranteedContract(IntPtr api,DFITCFASLReqQryGuaranteedContractField p) ;
-    /**
-      * FASL-标的证券查询请求
-      * @param p:指向标的证券查询请求结构体的地址
-      * @return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
-      */
+    ///
+     ///FASL-标的证券查询请求
+     ///@param p:指向标的证券查询请求结构体的地址
+     ///@return : 0 表示请求发送成功，非 0 表示请求发送失败，具体错误请参考error.xml
+      ///
      public IntPtr ReqFASLQryUnderlyingContract(DFITCFASLReqQryUnderlyingContractField p)
      {
          return (Invoke(_handle, "ReqFASLQryUnderlyingContract", typeof(DeleReqFASLQryUnderlyingContract)) as DeleReqFASLQryUnderlyingContract)(_api, p);
